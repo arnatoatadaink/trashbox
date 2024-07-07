@@ -1,0 +1,1 @@
+NEWLINECODE = "\r" # \r\nだとJupyterのFileOpen、ReadLinesで\nが残る
