@@ -1,0 +1,3 @@
+retry_time:80
+press_time:20
+start_type:0
