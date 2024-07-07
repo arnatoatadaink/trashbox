@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="popup.css">
+<script type="module" src="popup.js"></script>
+<script type="text/javascript" src="util.js"></script>
+<script type="text/javascript" src="page_util.js"></script>
+<script type="module" src="background_util.js"></script>
+<script type="module" src="event.js"></script>
+</head>
+<body>
+    <div class="row">
+        <div style="display:block">
+            <label>default</label>
+        </div>
+        <div class="hover save" id="default">
+            <input class="zoom" name="zoom" type="number" min="1" max="400" value="100" step="1">
+            <div class="plus" >＋</div>
+            <div class="minus">–</div>
+            <div class="reset">Reset</div>
+            <!-- <div class="full"><input name="full" type="checkbox">fullonly</div> -->
+        </div>
+    </div>
+    <div class="save row" id="matches"></div>
+    <div class="button_div">
+        <input style="width:96%" class="addrow" type="button" value="add row">
+    </div>
+    <div class="button_div">
+        <input style="width:96%" class="cancel" type="button" value="cancel">
+    </div>
+    <div style="display: block; text-align: center; width: 100%;">
+        <a target="_blank" rel="noopener noreferrer" href="edit.html">go to editpage</a>
+    </div>
+</body>
+</html>

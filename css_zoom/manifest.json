@@ -1,0 +1,38 @@
+﻿{
+  "name": "css_zoom",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "css_zoom",
+
+  "permissions" : [
+	"background",
+    "contextMenus",
+	"activeTab",
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "action": {
+    "default_title": "zoom",
+	"default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js",
+        "page_util.js"
+      ]
+    }
+  ],
+  "background": {
+    "service_worker": "event.js",
+    "type": "module"
+  }
+}

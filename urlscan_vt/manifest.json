@@ -1,0 +1,31 @@
+﻿{
+  "name": "urlscan_vt",
+  "version": "1.0.0",
+  "manifest_version": 3,
+  "description": "urlscan_vt",
+  "permissions" : [
+	"background",
+    "contextMenus",
+	"activeTab"
+  ],
+  "host_permissions":[
+    "http://*/*",
+    "https://*/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "all_frames": true
+    }
+  ],  
+  "background": {
+    "service_worker": "event.js",
+    "type": "module"
+  }
+}
