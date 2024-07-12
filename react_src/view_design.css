@@ -1,0 +1,212 @@
+/* TODO css restructure color.css / functional.css */
+.main {
+    width  : 100%;
+    height : 100%;
+    overflow-y: auto;
+}
+
+.menu {
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 2;
+    background-color: #eff3f5;
+    overflow: hidden;
+    opacity: 1;
+    transition: all 1.2s cubic-bezier(.08,.64,.56,1);
+}
+
+.menu.hide:not(:hover) {
+    opacity: 0;
+    transition: all 1.2s cubic-bezier(.08,.64,.56,1);
+}
+
+.vertical.menu {
+    width:  20%;
+    height: 100vh;
+    height: 100svh;
+}
+
+.vertical.menu.hide:not(:hover) {
+    left: -19%;
+    transition: all 1.2s cubic-bezier(.08,.64,.56,1);
+}
+
+.horizontal.menu {
+    width:  100%;
+    height: 10%;
+    display: inline-flex;
+    align-content: center;
+    /* justify-content: space-evenly; */
+    flex-wrap: wrap;
+    align-items: center;    
+}
+
+/* @media screen and (max-width: 1419px) */
+/*.vertical.menu {
+    width: 30%;
+}*/
+
+.vertical > .menu_clip {
+    
+}
+
+.vertical.hide:not(:hover) + .main {
+    position: fixed;
+    top: 0;
+    left: 0.5vw;
+    width:99.5vw;
+    transition: all 1.2s cubic-bezier(.08,.64,.56,1);
+}
+.vertical + .main {
+    position: fixed;
+    top:0;
+    left: 20vw;
+    width:80vw;
+    transition: all 1.2s cubic-bezier(.08,.64,.56,1);
+}
+
+.horizontal.hide + .main {
+    position: fixed;
+    top: 0;
+    height:100vh;
+    transition: all 1.2s cubic-bezier(.08,.64,.56,1);
+}
+.horizontal:not(.hide) + .main {
+    position: fixed;
+    top:10vh;
+    height:90vh;
+    transition: all 1.2s cubic-bezier(.08,.64,.56,1);
+}
+
+.vertical > .menu_item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vertical > .menu_clip > .menu_item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.horizontal.menu {
+    
+}
+
+.horizontal > .menu_clip {
+    
+}
+
+.horizontal > .menu_item {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.horizontal > .menu_clip > .menu_item {
+    
+}
+.vertical .row {
+    padding:5px 0 5px 0;
+}
+.vertical .row+.row {
+    border-left: 1px 0px 0px 0px;
+    border-style: solid;
+    border-color: #aaa;
+}
+.horizontal > .row {
+    min-height:80%;
+    padding:0 5px 0 5px;
+}
+.horizontal > .row+.row {
+    border-width: 0px 0px 0px 1px;
+    border-style: solid;
+    border-color: #aaa;
+}
+
+.horizontal > .logout {
+    position:absolute;
+    right:10px;
+}
+.hide > .pin{
+    transform: rotate(90deg);
+    transition: all 1.2s cubic-bezier(.08,.64,.56,1);
+}
+:not(.hide) > .pin{
+    transform: rotate(45deg);
+    transition: all 1.2s cubic-bezier(.08,.64,.56,1);
+}
+
+.pin {
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pin > .head {
+    margin-top:5px;
+    width  : 16px; /* 幅 */
+    height : 16px;
+    border-bottom : 12px solid #000000; /* 8ec6ff高さ */
+    border-top    :  0px solid #000000; /* 高さ */
+    border-left   :  4px solid transparent; /* 左側下辺の伸び */
+    border-right  :  4px solid transparent; /* 右側下辺の伸び */
+    box-sizing    :  border-box;
+}
+
+.pin > .needle {
+    margin-bottom:5px;
+    width  : 3px;/* 幅 */
+    height : 12px;
+    border-top    : 12px solid #888888; /* 高さ */
+    border-bottom :  0px solid #888888; /* 高さ */
+    border-left   :  1px solid transparent; /* 左側下辺の伸び */
+    border-right  :  1px solid transparent; /* 右側下辺の伸び */
+    box-sizing    :  border-box;
+}
+
+.horizontal+* .list_item {
+    border-bottom: 1px solid #888888;
+    width:100vw;
+}
+
+.vertical+* .list_item {
+    /* border-bottom: 1px solid #888888; */
+    height:100vh;
+}
+
+.list_item_data {
+    margin: 8px;
+    padding: 0px;
+}
+
+.option_button {
+    margin-left : 5px;
+}
+
+.login_form{
+    position       : absolute;
+    width          : 100vw;
+    height         : 100vh;
+    display        : inline-flex;
+    align-items    : center;
+    justify-content: center;
+}
+.login_form .login_form{
+    position       : initial;
+    width          : initial;
+    height         : initial;
+    display        : initial;
+    align-items    : initial;
+    justify-content: initial;
+}
+
+.hidden {
+    display :none;
+}
